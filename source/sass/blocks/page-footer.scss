@@ -1,0 +1,39 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  background-color: $bcg-nav;
+
+  @media (max-width: $tablet-width) {
+    gap: 36px;
+  }
+}
+
+.page-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  .main-nav__item {
+    text-align: center;
+    font-size: 16px;
+
+    a {
+      font-size: 16px;
+    }
+  }
+
+
+  @media (max-width: $tablet-width) {
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+
+    .main-nav__list {
+      gap: 16px;
+      margin-top: 0;
+    }
+  }
+}

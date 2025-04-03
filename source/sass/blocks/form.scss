@@ -1,0 +1,102 @@
+.form {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+
+  &--bottom {
+    .btn {
+      max-width: 242px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+input {
+  box-sizing: border-box;
+  max-height: 45px;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: $basic-black;
+  border-radius: 1000px;
+  border: 1px solid $input-border;
+
+  &:hover {
+    border: 1px solid #0f0f0f;
+  }
+
+  &:focus {
+    outline: 0;
+    border: 1px solid #000;
+  }
+
+  &:active {
+    border: 1px solid #000;
+  }
+}
+
+.form_message.error.inactive {
+  display: none;
+}
+
+.form_message.error.active {
+  display: block;
+  color: #0a0a0a;
+}
+
+.error {
+  color: #df5e63;
+  border-color: #df5e63 !important;
+}
+
+label.error {
+  margin-right: auto;
+  margin-top: -25px;
+  text-align: right;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+#phone1-error,
+#phone2-error {
+  display: flex;
+  margin-top: 5px;
+}
+
+.submit_btn {
+  margin: 0 auto;
+}
+
+.form__checkbox {
+  display: inline-block;
+  font-size: 13px;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+input[type="checkbox"] {
+  width: auto;
+  height: auto;
+  accent-color: $basic-black;
+  vertical-align: middle;
+}
+
+.iti__selected-flag {
+  border-radius: 1000px 0 0 1000px;
+}
+
+.iti input[type=tel] {
+  padding-left: 90px !important;
+}

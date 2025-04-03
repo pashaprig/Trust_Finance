@@ -1,0 +1,47 @@
+.promo {
+  display: flex;
+  justify-content: center;
+  padding: 200px 16px;
+  background: $basic-white no-repeat 50% url("../img/bcg/promo-bcg.webp");
+  background-size: cover;
+
+  .btn {
+    margin-top: 20px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 100px 16px;
+    padding-top: 200px;
+    background: $basic-white no-repeat 50% url("../img/bcg/promo-bcg-mob.webp");
+    background-size: cover;
+  }
+}
+
+.promo__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.promo__sub-heading {
+  font-size: 16px;
+  font-weight: 700;
+  color: $main-color;
+}
+
+.promo__heading {
+  font-size: 39px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 31px;
+  }
+}
+
+.promo__about {
+  margin-top: -4px;
+  font-size: 20px;
+
+}

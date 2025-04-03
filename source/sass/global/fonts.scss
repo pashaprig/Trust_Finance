@@ -1,0 +1,79 @@
+/* Fonts */
+
+// Montserrat
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("Montserrat Regular"),
+    url("../fonts/montserrat/Montserrat-Regular400.woff2") format("woff2"),
+    url("../fonts/montserrat/Montserrat-Regular400.woff") format("woff"),
+    url("../fonts/montserrat/Montserrat-Regular400.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    local("Montserrat SemiBold"),
+    url("../fonts/montserrat/Montserrat-SemiBold600.woff2") format("woff2"),
+    url("../fonts/montserrat/Montserrat-SemiBold600.woff") format("woff"),
+    url("../fonts/montserrat/Montserrat-SemiBold600.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local("Montserrat Bold"),
+    url("../fonts/montserrat/Montserrat-Bold700.woff2") format("woff2"),
+    url("../fonts/montserrat/Montserrat-Bold700.woff") format("woff"),
+    url("../fonts/montserrat/Montserrat-Bold700.ttf") format("truetype");
+}
+
+// Poppins
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    local("Poppins Medium"),
+    url("../fonts/poppins/Poppins-Medium.woff2") format("woff2"),
+    url("../fonts/poppins/Poppins-Medium.woff") format("woff"),
+    url("../fonts/poppins/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local("Poppins Bold"),
+    url("../fonts/poppins/Poppins-Bold.woff2") format("woff2"),
+    url("../fonts/poppins/Poppins-Bold.woff") format("woff"),
+    url("../fonts/poppins/Poppins-Bold.ttf") format("truetype");
+}
+
+// Epilogue
+
+@font-face {
+  font-family: "Epilogue";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    local("Epilogue Medium"),
+    url("../fonts/epilogue/Epilogue-Medium.woff2") format("woff2"),
+    url("../fonts/epilogue/Epilogue-Medium.woff") format("woff"),
+    url("../fonts/epilogue/Epilogue-Medium.ttf") format("truetype");
+}

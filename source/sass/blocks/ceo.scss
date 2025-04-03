@@ -1,0 +1,49 @@
+
+.ceo-calculator__bcg-wrapper {
+  @media (max-width: $tablet-width) {
+    background: no-repeat 0 60% url("../img/bcg/calculator-bcg.webp");
+  }
+}
+
+.ceo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-around;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    gap: 16px;
+
+    .btn {
+      align-self: center;
+    }
+  }
+}
+
+.ceo__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 860px;
+}
+
+.ceo__text {
+  font-size: 20px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 16px;
+  }
+}
+
+.ceo__img {
+  object-fit: contain;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    height: auto;
+  }
+}

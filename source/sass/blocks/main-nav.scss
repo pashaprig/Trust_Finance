@@ -1,0 +1,169 @@
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+  align-items: center;
+  background: $bcg-nav;
+  padding: 12px 65px;
+  border-radius: 50px;
+
+  @media (max-width: $tablet-width) {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: start;
+    min-height: 100vh;
+    width: 100%;
+    padding: 35px 16px;
+    background: $basic-white;
+    border-radius: unset;
+
+    &--closed {
+      background: transparent;
+      min-height: 0;
+      height: 0;
+
+      * {
+        display: none;
+      }
+    }
+  }
+}
+
+.page-header__img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__list {
+  @media (max-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.main-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 80px;
+  }
+}
+
+.main-nav__item {
+  a {
+    color: $text-black;
+    cursor: pointer;
+
+    &:hover {
+      color: $main-color;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+
+    a {
+      font-size: 20px;
+    }
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  display: none;
+  z-index: 2;
+  width: 45px;
+  height: 45px;
+  padding: 6px 14px;
+  background-color: $bcg-nav;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+  }
+}
+
+// Бургер на css
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 21px;
+  height: 2px;
+  background-color: $heading-black;
+  box-shadow:
+    0 5px 0 0 $heading-black,
+    0 10px 0 0 $heading-black;
+  transition: all ease-in-out 500ms;
+}
+
+.main-nav--closed .main-nav__toggle {
+  &:hover::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}
+
+.main-nav--closed svg {
+  display: none;
+}
+
+//Крестик на css
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    right: 12px;
+    width: 21px;
+    height: 2px;
+    background-color: $heading-black;
+    transition: all ease-in-out 500ms;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 0.6;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+  }
+}

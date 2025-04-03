@@ -1,0 +1,36 @@
+.page-header {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1920px;
+  padding-top: 28px;
+  padding-bottom: 0;
+  background: $basic-white;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+
+.page-header__img {
+  @media (max-width: $tablet-width) {
+    position: relative;
+    z-index: 2;
+    width: 168px;
+    height: auto;
+  }
+}
+
+.page-header__lang-wrapper {
+
+  @media (max-width: $tablet-width) {
+    margin-top: auto;
+  }
+}

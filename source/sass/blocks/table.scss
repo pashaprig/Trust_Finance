@@ -1,0 +1,58 @@
+.table {
+  padding-top: 120px;
+  padding-bottom: 60px;
+  background: no-repeat 100% -75% url("../img/bcg/calculator-bcg-opacity0-3.webp");
+  overflow-x: auto;
+
+  table {
+    box-sizing: border-box;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Poppins", "Arial", sans-serif;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+
+    thead tr th:nth-child(2) {
+      border-radius: 16px 16px 0 0;
+    }
+
+    tbody tr:last-child td:nth-child(2) {
+      border-radius: 0 0 16px 16px ;
+    }
+  }
+
+  th {
+    font-weight: 700;
+  }
+
+  tr > td,
+  tr > th {
+    &:nth-child(2) {
+      background: #edf0ff;
+    }
+  }
+
+  td,
+  th {
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 14.28%;
+    padding: 22px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 36px;
+    padding-bottom: 36px;
+    background: 0;
+
+    table {
+      font-size: 16px;
+    }
+
+    td,
+    th {
+      padding: 5px;
+    }
+  }
+}
