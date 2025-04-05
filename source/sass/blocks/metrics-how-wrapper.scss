@@ -1,0 +1,9 @@
+.metrics-how-wrapper {
+  background: no-repeat 0 0 url("../img/bcg/how-bcg.webp");
+  background-size: cover;
+
+  @media (max-width: $tablet-width) {
+    background: no-repeat 0 800px url("../img/bcg/how-bcg-mob.webp");
+    background-size: cover;
+  }
+}
