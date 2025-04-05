@@ -63,7 +63,6 @@
 
 .promo__about {
   color: $heading-black;
-  line-height: 150%;
 }
 
 .promo__play {
@@ -99,7 +98,7 @@
   color: $heading-black;
   font-size: 16px;
   font-weight: 700;
-  line-height: 150%;
+
 
   @media (max-width: $tablet-width) {
     min-width: unset;
