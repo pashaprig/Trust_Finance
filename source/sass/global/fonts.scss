@@ -99,3 +99,17 @@
     url("../fonts/inter/Inter-Bold.woff") format("woff"),
     url("../fonts/inter/Inter-Bold.ttf") format("truetype");
 }
+
+/* Roboto */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("Roboto Regular"),
+    url("../fonts/roboto/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/roboto/Roboto-Regular.woff") format("woff"),
+    url("../fonts/roboto/Roboto-Regular.ttf") format("truetype");
+}

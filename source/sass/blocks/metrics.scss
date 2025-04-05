@@ -67,7 +67,7 @@
   background-color: $basic-white;
 
   @media (max-width: $tablet-width) {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.5);
   }
 }
 
@@ -97,10 +97,6 @@
 
     h3 {
       font-size: 48px;
-    }
-
-    &:nth-of-type(6) {
-      background-color: transparent;
     }
   }
 }

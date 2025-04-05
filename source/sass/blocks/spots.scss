@@ -1,0 +1,75 @@
+.spots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  color: $basic-white;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bcg/spots-bcg.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fff;
+
+  @media (max-width: $tablet-width) {
+    gap: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    .btn {
+      max-width: 100%;
+    }
+  }
+}
+
+.spots__heading-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.spots__heading {
+  color: $basic-white;
+}
+
+.spots__number {
+  display: flex;
+  align-items: center;
+  width: 305px;
+  height: 211px;
+  margin-bottom: 20px;
+  font-size: 180px;
+  font-weight: 500;
+
+  @media (max-width: $tablet-width) {
+    height: 75px;
+    font-size: 64px;
+  }
+}
+
+.spots__text {
+  width: 305px;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 28px;
+  line-height: normal;
+  text-transform: uppercase;
+
+  @media (max-width: $tablet-width) {
+    text-align: left;
+  }
+}
+
+.spots__about-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 48px;
+
+  @media (max-width: $tablet-width) {
+    gap: 20px;
+  }
+}
+
+.spots__about {
+  max-width: 428px;
+}
