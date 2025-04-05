@@ -1,17 +1,12 @@
 .page-header {
-  z-index: 10;
-  position: fixed;
-  top: 0;
   box-sizing: border-box;
   display: flex;
   gap: 10px;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1920px;
-  padding-top: 28px;
-  padding-bottom: 0;
-  background: $basic-white;
+  padding-top: 10px;
+  padding-bottom: 33px;
 
   @media (max-width: $tablet-width) {
     padding-top: 21px;

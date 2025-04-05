@@ -1,79 +1,101 @@
 /* Fonts */
 
-// Montserrat
+// Raleway
 
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src:
-    local("Montserrat Regular"),
-    url("../fonts/montserrat/Montserrat-Regular400.woff2") format("woff2"),
-    url("../fonts/montserrat/Montserrat-Regular400.woff") format("woff"),
-    url("../fonts/montserrat/Montserrat-Regular400.ttf") format("truetype");
+    local("Raleway Regular"),
+    url("../fonts/raleway/Raleway-Regular.woff2") format("woff2"),
+    url("../fonts/raleway/Raleway-Regular.woff") format("woff"),
+    url("../fonts/raleway/Raleway-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    local("Raleway Medium"),
+    url("../fonts/raleway/Raleway-Medium.woff2") format("woff2"),
+    url("../fonts/raleway/Raleway-Medium.woff") format("woff"),
+    url("../fonts/raleway/Raleway-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
   src:
-    local("Montserrat SemiBold"),
-    url("../fonts/montserrat/Montserrat-SemiBold600.woff2") format("woff2"),
-    url("../fonts/montserrat/Montserrat-SemiBold600.woff") format("woff"),
-    url("../fonts/montserrat/Montserrat-SemiBold600.ttf") format("truetype");
+    local("Raleway SemiBold"),
+    url("../fonts/raleway/Raleway-SemiBold.woff2") format("woff2"),
+    url("../fonts/raleway/Raleway-SemiBold.woff") format("woff"),
+    url("../fonts/raleway/Raleway-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
   src:
-    local("Montserrat Bold"),
-    url("../fonts/montserrat/Montserrat-Bold700.woff2") format("woff2"),
-    url("../fonts/montserrat/Montserrat-Bold700.woff") format("woff"),
-    url("../fonts/montserrat/Montserrat-Bold700.ttf") format("truetype");
+    local("Raleway Bold"),
+    url("../fonts/raleway/Raleway-Bold.woff2") format("woff2"),
+    url("../fonts/raleway/Raleway-Bold.woff") format("woff"),
+    url("../fonts/raleway/Raleway-Bold.ttf") format("truetype");
 }
 
-// Poppins
+// Inter
 
 @font-face {
-  font-family: "Poppins";
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("Inter Regular"),
+    url("../fonts/inter/Inter-Regular.woff2") format("woff2"),
+    url("../fonts/inter/Inter-Regular.woff") format("woff"),
+    url("../fonts/inter/Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
   src:
-    local("Poppins Medium"),
-    url("../fonts/poppins/Poppins-Medium.woff2") format("woff2"),
-    url("../fonts/poppins/Poppins-Medium.woff") format("woff"),
-    url("../fonts/poppins/Poppins-Medium.ttf") format("truetype");
+    local("Inter Medium"),
+    url("../fonts/inter/Inter-Medium.woff2") format("woff2"),
+    url("../fonts/inter/Inter-Medium.woff") format("woff"),
+    url("../fonts/inter/Inter-Medium.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Poppins";
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    local("Inter SemiBold"),
+    url("../fonts/inter/Inter-SemiBold.woff2") format("woff2"),
+    url("../fonts/inter/Inter-SemiBold.woff") format("woff"),
+    url("../fonts/inter/Inter-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
   src:
-    local("Poppins Bold"),
-    url("../fonts/poppins/Poppins-Bold.woff2") format("woff2"),
-    url("../fonts/poppins/Poppins-Bold.woff") format("woff"),
-    url("../fonts/poppins/Poppins-Bold.ttf") format("truetype");
-}
-
-// Epilogue
-
-@font-face {
-  font-family: "Epilogue";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src:
-    local("Epilogue Medium"),
-    url("../fonts/epilogue/Epilogue-Medium.woff2") format("woff2"),
-    url("../fonts/epilogue/Epilogue-Medium.woff") format("woff"),
-    url("../fonts/epilogue/Epilogue-Medium.ttf") format("truetype");
+    local("Inter Bold"),
+    url("../fonts/inter/Inter-Bold.woff2") format("woff2"),
+    url("../fonts/inter/Inter-Bold.woff") format("woff"),
+    url("../fonts/inter/Inter-Bold.ttf") format("truetype");
 }

@@ -3,9 +3,11 @@
   flex-wrap: wrap;
   width: 40%;
   align-items: center;
-  background: $bcg-nav;
-  padding: 12px 65px;
-  border-radius: 50px;
+  padding: 20px 40px;
+  font-family: "Inter", "Arial", sans-serif;
+  border-radius: 20px;
+  border: 1px solid $basic-white;
+  background: rgba(255, 255, 255, 0.6);
 
   @media (max-width: $tablet-width) {
     box-sizing: border-box;
@@ -19,6 +21,7 @@
     padding: 35px 16px;
     background: $basic-white;
     border-radius: unset;
+    border: 0;
 
     &--closed {
       background: transparent;
@@ -63,12 +66,15 @@
 }
 
 .main-nav__item {
+  font-size: 16px;
+  line-height: 150%;
+
   a {
     color: $text-black;
     cursor: pointer;
 
     &:hover {
-      color: $main-color;
+      color: $heading-black;
     }
 
     &:active {
@@ -94,9 +100,9 @@
   width: 45px;
   height: 45px;
   padding: 6px 14px;
-  background-color: $bcg-nav;
+  background-color: $main-color;
   border: none;
-  border-radius: 50%;
+  border-radius: 10px;
   cursor: pointer;
 
   @media (max-width: $tablet-width) {
@@ -113,10 +119,10 @@
   transform: translateX(50%);
   width: 21px;
   height: 2px;
-  background-color: $heading-black;
+  background-color: $basic-white;
   box-shadow:
-    0 5px 0 0 $heading-black,
-    0 10px 0 0 $heading-black;
+    0 5px 0 0 $basic-white,
+    0 10px 0 0 $basic-white;
   transition: all ease-in-out 500ms;
 }
 
@@ -144,7 +150,7 @@
     right: 12px;
     width: 21px;
     height: 2px;
-    background-color: $heading-black;
+    background-color: $basic-white;
     transition: all ease-in-out 500ms;
   }
 

@@ -1,0 +1,9 @@
+.header-promo-why-wrapper {
+  background: $basic-white no-repeat 50% url("../img/bcg/promo-bcg.webp");
+  background-size: cover;
+
+  @media (max-width: $tablet-width) {
+    background: $basic-white no-repeat 50% url("../img/bcg/promo-bcg-mob.webp");
+    background-size: cover;
+  }
+}
