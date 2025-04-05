@@ -3,6 +3,18 @@
   flex-direction: column;
   gap: 48px;
   align-items: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  @media (max-width: $tablet-width) {
+    gap: 26px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    .btn {
+      min-width: 100%;
+    }
+  }
 }
 
 .why__list {
