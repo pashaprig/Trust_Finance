@@ -1,0 +1,137 @@
+.crypto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding: 70px 90px;
+  background: $basic-white;
+
+  @media (max-width: $tablet-width) {
+    gap: 26px;
+    padding: 16px;
+
+    .btn {
+      max-width: unset;
+      width: 100%;
+    }
+  }
+}
+
+.crypto__heading {
+  text-align: center;
+}
+
+.crypto__list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-around;
+
+  @media (max-width: $tablet-width) {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+  }
+}
+
+.crypto__item {
+  padding: 18px 7px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #F5F8FF;
+
+  &:hover {
+    background: $main-color;
+
+    .crypto__name,
+    .crypto__amount {
+      color: $basic-white;
+    }
+
+    .crypto__percent {
+      color: #F5F8FF;
+    }
+
+    .crypto__arrow {
+      background: $basic-white;
+
+      svg {
+        fill: $main-color
+      }
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    scroll-snap-align: start;
+    margin-bottom: 20px;
+  }
+}
+
+.crypto__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid $basic-white;
+}
+
+.crypto__name {
+  color: #4F4F4F;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.crypto__full-name {
+  padding: 4px 6px;
+  color: #000;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 4px;
+  background: #FFF;
+  line-height: normal;
+}
+
+.crypto__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  background-color: $main-color;
+  border-radius: 50%;
+
+  svg {
+    transform: rotate(-45deg);
+    fill: white;
+  }
+}
+
+.crypto__currency-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 17px;
+}
+
+.crypto__number-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.crypto__amount {
+  color: $main-color;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.crypto__percent {
+  color: #B6B6B6;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 160%;
+}
