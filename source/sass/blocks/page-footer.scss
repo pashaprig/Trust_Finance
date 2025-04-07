@@ -2,18 +2,35 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding-top: 36px;
-  padding-bottom: 36px;
-  background-color: $bcg-nav;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  border-radius: 40px;
+  background: linear-gradient(122deg, #FFF 0%, #F6F9FF 96.81%);
 
   @media (max-width: $tablet-width) {
-    gap: 36px;
+    gap: 26px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
 .page-footer__wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 105px;
+
+  .main-nav__list {
+    gap: 48px;
+    justify-content: start;
+  }
+
+  .main-nav__list--terms {
+    justify-content: space-between;
+  }
 
   .main-nav__item {
     text-align: center;
@@ -28,12 +45,23 @@
   @media (max-width: $tablet-width) {
     flex-wrap: wrap;
     gap: 16px;
-    align-items: center;
-    justify-content: center;
+    justify-content: start;
 
     .main-nav__list {
       gap: 16px;
       margin-top: 0;
+      align-items: start;
+    }
+
+    .main-nav__list--terms {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: start;
+      justify-content: space-around;
+    }
+
+    .main-nav__item {
+      width: unset;
     }
   }
 }
