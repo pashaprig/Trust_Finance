@@ -6,9 +6,14 @@ class App {
     this.modal();
     this.availableSlots();
     this.fetchCryptoPrices();
+    this.onButtonPlay();
   }
 
-  constructor() {}
+  constructor() {
+    this.iframe = document.querySelector('iframe');
+    this.player = new Vimeo.Player(this.iframe);
+    this.btnPlay = document.querySelector('#button-play')
+  }
 
   initMobileMenu() {
     const navMain = document.querySelector('.main-nav');
@@ -268,6 +273,18 @@ class App {
 
     const chart = new ApexCharts(element, options);
     chart.render();
+  }
+
+  onButtonPlay() {
+    const promoVideo = document.querySelector('.promo__video')
+
+    const playVideo = () => {
+      promoVideo.classList.remove('hide')
+      this.player.play()
+      this.btnPlay.style.display = 'none'
+    }
+
+    this.btnPlay.addEventListener('click', playVideo);
   }
 }
 
