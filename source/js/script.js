@@ -214,11 +214,9 @@ class App {
           arrowElement.classList.add('regress');
         }
 
-        // Получаем историю для каждой валюты и строим графики
-        const history = await this.getCoinHistory(2, currency);
+        const history = await this.getCoinHistory(7, currency);
         if (history) {
-          // Пример предполагаемой структуры данных
-          const pricesHistory = history.prices.map(item => item[1]); // Преобразуем данные в нужный формат для графика
+          const pricesHistory = history.prices.map(item => item[1]);
           this.renderChart(`chart-${currency.toLowerCase()}`, pricesHistory);
         }
       });
