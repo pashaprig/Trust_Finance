@@ -108,6 +108,12 @@
     transform: rotate(-45deg);
     fill: white;
   }
+
+  &.regress {
+    svg {
+      transform: rotate(45deg);
+    }
+  }
 }
 
 .crypto__currency-wrapper {
@@ -134,4 +140,10 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 160%;
+}
+
+.crypto__chart {
+  width: 100px;
+  height: 53px;
+  min-height: unset !important;
 }

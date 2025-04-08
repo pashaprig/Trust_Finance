@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -17,7 +17,7 @@
 </head>
 
 <body class="page-body">
-  <main>
+  <div>
     <div class="header-promo-why-wrapper">
       <header class="page-header container">
         <picture>
@@ -31,14 +31,14 @@
             <li class="main-nav__item"><a href="#income">Income</a></li>
             <li class="main-nav__item"><a href="#faq">Questions&Answrers</a></li>
           </ul>
-          <div class="page-header__lang-wrapper mobile-only">
+          <div class="mobile-only">
             <button class="btn" aria-label="openModal">Apply now</button>
           </div>
           <button class="main-nav__toggle" type="button">
             <span class="main-nav__open-btn-text visually-hidden">Menu</span>
           </button>
         </nav>
-        <div class="page-header__lang-wrapper desktop-only">
+        <div class="desktop-only">
           <button class="btn" aria-label="openModal">Apply now</button>
         </div>
       </header>
@@ -69,8 +69,8 @@
               </svg>
             </span>
             <span class="promo__number">0</span>
-            <span class="promo__number">3</span>
-            <span class="promo__number">2</span>
+            <span class="promo__number" aria-label="firstDigit">0</span>
+            <span class="promo__number" aria-label="secondDigit">0</span>
           </div>
           <span class="promo__strong">Slots available</span>
         </div>
@@ -232,7 +232,11 @@
     <section class="spots container">
       <div class="spots__heading-wrapper">
         <h2 class="spots__heading heading">Limited Spots Available<br>Act Now!</h2>
-        <span class="spots__number">032</span>
+        <span class="spots__number">
+          <span>0</span>
+          <span aria-label="firstDigit">0</span>
+          <span aria-label="secondDigit">0</span>
+        </span>
         <span class="spots__text">exclusive slots</span>
       </div>
       <div class="spots__about-wrapper">
@@ -347,7 +351,7 @@
             <img class="crypto__img" src="img/img/btc.webp" alt="btc">
             <span class="crypto__name">BTC</span>
             <span class="crypto__full-name">BITCOIN</span>
-            <div class="crypto__arrow">
+            <div class="crypto__arrow" data-btc-arrow>
               <svg width="25" height="25">
                 <use xlink:href="img/sprite.svg#right-arrow"></use>
               </svg>
@@ -355,10 +359,10 @@
           </div>
           <div class="crypto__currency-wrapper">
             <div class="crypto__number-wrapper">
-              <span class="crypto__amount">$87,232.12</span>
-              <span class="crypto__percent">-0.25%</span>
+              <span class="crypto__amount" data-btc>$87,232.12</span>
+              <span class="crypto__percent" data-btc-percent>-0.25%</span>
             </div>
-            <img width="100" height="53" class="crypto__chart" src="img/img/chart.webp" alt="btc">
+            <div class="crypto__chart-wrapper" id="chart-btc"></div>
           </div>
         </li>
 
@@ -367,7 +371,7 @@
             <img class="crypto__img" src="img/img/eth.webp" alt="ETH">
             <span class="crypto__name">ETH</span>
             <span class="crypto__full-name">ETHEREUM</span>
-            <div class="crypto__arrow">
+            <div class="crypto__arrow" data-eth-arrow>
               <svg width="25" height="25">
                 <use xlink:href="img/sprite.svg#right-arrow"></use>
               </svg>
@@ -375,10 +379,10 @@
           </div>
           <div class="crypto__currency-wrapper">
             <div class="crypto__number-wrapper">
-              <span class="crypto__amount">$2,064.21</span>
-              <span class="crypto__percent">-0.72%</span>
+              <span class="crypto__amount" data-eth>$2,064.21</span>
+              <span class="crypto__percent" data-eth-percent>-0.72%</span>
             </div>
-            <img width="100" height="53" class="crypto__chart" src="img/img/chart.webp" alt="btc">
+            <div class="crypto__chart-wrapper" id="chart-eth"></div>
           </div>
         </li>
 
@@ -387,7 +391,7 @@
             <img class="crypto__img" src="img/img/bnb.webp" alt="BNB">
             <span class="crypto__name">BNB</span>
             <span class="crypto__full-name">BINANCE</span>
-            <div class="crypto__arrow">
+            <div class="crypto__arrow" data-bnb-arrow>
               <svg width="25" height="25">
                 <use xlink:href="img/sprite.svg#right-arrow"></use>
               </svg>
@@ -395,10 +399,10 @@
           </div>
           <div class="crypto__currency-wrapper">
             <div class="crypto__number-wrapper">
-              <span class="crypto__amount">$632.94</span>
-              <span class="crypto__percent">-0.60%</span>
+              <span class="crypto__amount" data-bnb>$632.94</span>
+              <span class="crypto__percent" data-bnb-percent>-0.60%</span>
             </div>
-            <img width="100" height="53" class="crypto__chart" src="img/img/chart.webp" alt="btc">
+            <div class="crypto__chart-wrapper" id="chart-bnb"></div>
           </div>
         </li>
 
@@ -407,7 +411,7 @@
             <img class="crypto__img" src="img/img/usdt.webp" alt="USDT">
             <span class="crypto__name">USDT</span>
             <span class="crypto__full-name">TETHER</span>
-            <div class="crypto__arrow">
+            <div class="crypto__arrow" data-usdt-arrow>
               <svg width="25" height="25">
                 <use xlink:href="img/sprite.svg#right-arrow"></use>
               </svg>
@@ -415,139 +419,157 @@
           </div>
           <div class="crypto__currency-wrapper">
             <div class="crypto__number-wrapper">
-              <span class="crypto__amount">$1.12</span>
-              <span class="crypto__percent">0.0%</span>
+              <span class="crypto__amount" data-usdt>$1.12</span>
+              <span class="crypto__percent" data-usdt-percent>0.0%</span>
             </div>
-            <img width="100" height="53" class="crypto__chart" src="img/img/chart.webp" alt="btc">
+
+            <div class="crypto__chart-wrapper" id="chart-usdt"></div>
           </div>
         </li>
+
       </ul>
       <button class="btn mobile-only" aria-label="openModal">Apply now</button>
     </section>
 
-    <section class="faq container" id="faq">
-      <h2 class="faq__heading heading">Frequently Asked Questions</h2>
+    <div class="faq-footer-wrapper">
+      <section class="faq container" id="faq">
+        <h2 class="faq__heading heading">Frequently Asked Questions</h2>
 
-      <div class="faq__wrapper">
-        <div class="faq__container">
-          <div class="faq__btn-wrapper">
-            <p class="faq__question">How do I get started using the TrustFinance platform?</p>
-            <button class="faq__toggle-btn show">
+        <div class="faq__wrapper">
+          <div class="faq__container">
+            <div class="faq__btn-wrapper">
+              <p class="faq__question">How do I get started using the TrustFinance platform?</p>
+              <button class="faq__toggle-btn">
 
-            </button>
+              </button>
+            </div>
+            <div class="faq__dropdown">
+              <div class="faq__dropdown-content">
+                <p>Getting started is simple! Register in just a few easy steps, complete our quick verification
+                  process,
+                  and make a minimum deposit of $250. If you're fortunate, you'll secure an exclusive spot in our new
+                  phase for elite clients and begin benefiting from our advanced AI-driven investment strategies right
+                  away.</p>
+              </div>
+            </div>
           </div>
-          <div class="faq__dropdown">
-            <div class="faq__dropdown-content show">
-              <p>Getting started is simple! Register in just a few easy steps, complete our quick verification process,
-                and make a minimum deposit of $250. If you're fortunate, you'll secure an exclusive spot in our new
-                phase for elite clients and begin benefiting from our advanced AI-driven investment strategies right
-                away.</p>
+
+          <div class="faq__container">
+            <div class="faq__btn-wrapper">
+              <p class="faq__question">What are the minimum deposit requirements?</p>
+              <button class="faq__toggle-btn"></button>
+            </div>
+            <div class="faq__dropdown">
+              <div class="faq__dropdown-content">
+                <p>A minimum deposit of $250 is required to open an account. This deposit grants you full access to our
+                  cutting-edge tools and personalised investment services, including a chance to join our exclusive new
+                  phase for attracting forward-thinking investors.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__container">
+            <div class="faq__btn-wrapper">
+              <p class="faq__question">How is the security of my funds ensured?</p>
+              <button class="faq__toggle-btn"></button>
+            </div>
+            <div class="faq__dropdown">
+              <div class="faq__dropdown-content">
+                <p>Security is our highest priority. Trust Finance utilises state-of-the-art encryption and blockchain
+                  technology to protect your funds and personal data. Our platform undergoes regular audits and
+                  continuous
+                  monitoring, ensuring that every transaction is secure and fully traceable.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__container">
+            <div class="faq__btn-wrapper">
+              <p class="faq__question">What support options are available to customers?</p>
+              <button class="faq__toggle-btn"></button>
+            </div>
+            <div class="faq__dropdown">
+              <div class="faq__dropdown-content">
+                <p>Our dedicated support team is available 24/7 to assist you. You can reach out via telephone, email,
+                  or
+                  live chat. Additionally, every investor is assigned a personal account manager who provides tailored
+                  assistance and guidance whenever needed.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__container">
+            <div class="faq__btn-wrapper">
+              <p class="faq__question">How can I track my investments?</p>
+              <button class="faq__toggle-btn"></button>
+            </div>
+            <div class="faq__dropdown">
+              <div class="faq__dropdown-content">
+                <p>Trust Finance offers a comprehensive dashboard with real-time reporting and analytics. You can
+                  effortlessly monitor your portfolio’s performance, access detailed insights, and stay updated with
+                  market trends—all designed to empower you to make informed investment decisions.</p>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="faq__container">
-          <div class="faq__btn-wrapper">
-            <p class="faq__question">What are the minimum deposit requirements?</p>
-            <button class="faq__toggle-btn"></button>
-          </div>
-          <div class="faq__dropdown">
-            <div class="faq__dropdown-content">
-              <p>A minimum deposit of $250 is required to open an account. This deposit grants you full access to our
-                cutting-edge tools and personalised investment services, including a chance to join our exclusive new
-                phase for attracting forward-thinking investors.</p>
-            </div>
-          </div>
+      <footer class="page-footer container">
+        <div class="page-footer__wrapper">
+          <picture>
+            <source type="image/webp" srcset="img/img/logo.webp">
+            <img width="282" height="83" class="page-header__img" src="img/img/logo.png" alt="Trust Finance">
+          </picture>
+          <ul class="main-nav__list">
+            <li class="main-nav__item active"><a href="#how">How it works?</a></li>
+            <li class="main-nav__item"><a href="#review">Reviews</a></li>
+            <li class="main-nav__item"><a href="#income">Income</a></li>
+            <li class="main-nav__item"><a href="#faq">Questions&Answrers</a></li>
+          </ul>
         </div>
-
-        <div class="faq__container">
-          <div class="faq__btn-wrapper">
-            <p class="faq__question">How is the security of my funds ensured?</p>
-            <button class="faq__toggle-btn"></button>
-          </div>
-          <div class="faq__dropdown">
-            <div class="faq__dropdown-content">
-              <p>Security is our highest priority. Trust Finance utilises state-of-the-art encryption and blockchain
-                technology to protect your funds and personal data. Our platform undergoes regular audits and continuous
-                monitoring, ensuring that every transaction is secure and fully traceable.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq__container">
-          <div class="faq__btn-wrapper">
-            <p class="faq__question">What support options are available to customers?</p>
-            <button class="faq__toggle-btn"></button>
-          </div>
-          <div class="faq__dropdown">
-            <div class="faq__dropdown-content">
-              <p>Our dedicated support team is available 24/7 to assist you. You can reach out via telephone, email, or
-                live chat. Additionally, every investor is assigned a personal account manager who provides tailored
-                assistance and guidance whenever needed.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq__container">
-          <div class="faq__btn-wrapper">
-            <p class="faq__question">How can I track my investments?</p>
-            <button class="faq__toggle-btn"></button>
-          </div>
-          <div class="faq__dropdown">
-            <div class="faq__dropdown-content">
-              <p>Trust Finance offers a comprehensive dashboard with real-time reporting and analytics. You can
-                effortlessly monitor your portfolio’s performance, access detailed insights, and stay updated with
-                market trends—all designed to empower you to make informed investment decisions.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="page-footer container">
-    <div class="page-footer__wrapper">
-      <picture>
-        <source type="image/webp" srcset="img/img/logo.webp">
-        <img width="282" height="83" class="page-header__img" src="img/img/logo.png" alt="Trust Finance">
-      </picture>
-      <ul class="main-nav__list">
-        <li class="main-nav__item active"><a href="#how">How it works?</a></li>
-        <li class="main-nav__item"><a href="#review">Reviews</a></li>
-        <li class="main-nav__item"><a href="#income">Income</a></li>
-        <li class="main-nav__item"><a href="#faq">Questions&Answrers</a></li>
-      </ul>
+        <nav class=" page-footer__wrapper">
+          <ul class="main-nav__list main-nav__list--terms">
+            <li class="main-nav__item">@2025 TrustFinance. All Rights Reserved. </li>
+            <li class="main-nav__item"><a href="#">Privacy Policy</a></li>
+            <li class="main-nav__item"><a href="#">Terms of use</a></li>
+          </ul>
+        </nav>
+      </footer>
     </div>
-    <nav class=" page-footer__wrapper">
-      <ul class="main-nav__list main-nav__list--terms">
-        <li class="main-nav__item">@2025 TrustFinance. All Rights Reserved. </li>
-        <li class="main-nav__item"><a href="#">Privacy Policy</a></li>
-        <li class="main-nav__item"><a href="#">Terms of use</a></li>
-      </ul>
-    </nav>
-  </footer>
+  </div>
 
   <section class="modal">
     <div class="modal__wrapper">
-      <h2 class="modal__heading heading">Заполните форму</h2>
-      <p class="modal__about">Выйдите на контакт с менеджером и внесите депозит от $250 для получения полного доступа к
-        платформе</p>
+      <h2 class="modal__heading heading">Let’s Get in Touch</h2>
+      <p class="modal__about">Connect with our manager and make a deposit of <strong>$250</strong> and more to get full access to the platform</p>
       <button class="modal__close-btn">
         <svg width="20" height="20">
           <use xlink:href="img/sprite.svg#close"></use>
         </svg>
-        <span class="visually-hidden">Закрыть модальное окно</span>
+        <span class="visually-hidden">close</span>
       </button>
 
       <form action="{form}" class="form" method="POST" id="leadform1" aria-form-type="userData">
-        <input type="text" name="firstName" class="form-input" required />
-        <input type="text" name="lastName" class="form-input" required />
-        <input type="tel" id="phone1" name="phone1" class="form-input form-input-phone" required />
-        <input type="email" name="email" class="form-input" required />
+        <label class="form__label-wrapper">
+          <span>Name</span>
+          <input type="text" name="firstName" class="form-input" required />
+        </label>
+        <label class="form__label-wrapper">
+          <span>Last name</span>
+          <input type="text" name="lastName" class="form-input" required />
+        </label>
+        <label class="form__label-wrapper">
+          <span>Phone number</span>
+          <input type="tel" id="phone1" name="phone1" class="form-input form-input-phone" required />
+        </label>
+        <label class="form__label-wrapper">
+          <span>Email</span>
+          <input type="email" name="email" class="form-input" required />
+        </label>
 
         <label class="form__checkbox">
           <input type="checkbox" name="policy" id="" checked>
-          Выбирая это, вы соглашаетесь с нашей <a>Политикой конфиденциальности</a>.
+          By submitting this form you agree to the <a>Privacy policy</a> & <a>Terms and conditions</a>.
         </label>
 
         <button class="btn submit_btn" type="submit">
@@ -559,7 +581,7 @@
       </form>
     </div>
   </section>
-
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.35.3"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/script.js"></script>

@@ -1,0 +1,12 @@
+.faq-footer-wrapper {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: no-repeat 0 100% url("../img/bcg/footer-bcg.webp");
+  background-size: cover;
+
+  @media (max-width: $tablet-width) {
+    padding: 16px;
+    background: no-repeat 0 100% url("../img/bcg/footer-bcg-mob.webp");
+    background-size: cover;
+  }
+}

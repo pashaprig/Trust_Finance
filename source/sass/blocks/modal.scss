@@ -27,8 +27,8 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  max-width: 539px;
-  padding: 16px 61px;
+  max-width: 696px;
+  padding: 24px;
   border-radius: 22px;
   background: $basic-white;
 
@@ -39,17 +39,28 @@
 }
 
 .modal__heading {
-  margin-bottom: 10px;
-  font-size: 20px;
-  font-weight: 400;
+  margin-bottom: 16px;
+  padding: 0 50px;
+  color: $main-color;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 120%;
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+    font-size: 24px;
+  }
 }
 
 .modal__about{
-  opacity: 0.5;
-  margin-bottom: 24px;
+  font-size: 16px;
+  margin-bottom: 48px;
+  color: $heading-black;
+  text-align: center;
 
   @media (max-width: $tablet-width) {
-    max-width: 267px;
+    margin-bottom: 25px;
   }
 }
 
@@ -64,8 +75,37 @@
   height: 44px;
   padding: 10px;
   background: 0;
-  border: 1px solid #2C2C2C;
   border-radius: 50%;
+  border: 1px solid $basic-white;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 1px;
+    background-color: $basic-black;
+    transition: all ease-in-out 500ms;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 0.6;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+  }
 
   &:hover {
     border: 1px solid $main-color
