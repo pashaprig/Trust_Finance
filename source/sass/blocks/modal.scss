@@ -1,4 +1,6 @@
 .modal {
+  box-sizing: border-box;
+  overflow: auto;
   position: fixed;
   top: 0;
   left: 0;
@@ -11,8 +13,8 @@
   visibility: hidden;
   opacity: 0;
   transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
+  opacity 0.3s ease,
+  visibility 0.3s ease;
 }
 
 .modal.active {
@@ -23,11 +25,13 @@
 }
 
 .modal__wrapper {
+  overflow: auto;
   position: relative;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   max-width: 696px;
+  max-height: 100vh;
   padding: 24px;
   border-radius: 22px;
   background: $basic-white;

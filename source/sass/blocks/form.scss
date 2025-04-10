@@ -60,7 +60,7 @@ input {
 
 label.error {
   margin-right: auto;
-  margin-top: -25px;
+  margin-top: -5px;
   text-align: right;
   font-weight: 400;
   font-size: 12px;
@@ -83,7 +83,6 @@ label.error {
 
 .form__checkbox {
   display: inline-block;
-  font-size: 13px;
 
   a {
     text-decoration: underline;
@@ -93,12 +92,14 @@ label.error {
 input[type="checkbox"] {
   width: auto;
   height: auto;
-  accent-color: $basic-black;
   vertical-align: middle;
+  padding: 0;
+  accent-color: $main-color;
 }
 
 .iti__selected-flag {
-  border-radius: 1000px 0 0 1000px;
+  font-size: 20px;
+  border-radius: 10px 0 0 10px;
 }
 
 .iti input[type="tel"] {

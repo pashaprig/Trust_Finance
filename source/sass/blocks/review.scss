@@ -31,13 +31,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 64px;
   max-width: 573px;
   margin: 5px 22px;
 
   @media (max-width: $tablet-width) {
     align-items: start;
-    gap: 64px;
     max-width: 75vw;
     margin: 5px 9px;
   }
@@ -45,6 +44,8 @@
 
 .review__blockquote {
   position: relative;
+  display: flex;
+  flex-grow: 1;
   padding: 40px;
   font-family: "Inter", "Arial", sans-serif;
   font-size: 20px;
